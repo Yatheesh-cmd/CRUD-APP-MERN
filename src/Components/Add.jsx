@@ -21,7 +21,7 @@ function Add() {
             if (result.status === 200) {
                 alert("Employee added successfully");
                 setEmp({ name: "", department: "", salary: "", phone: "" });
-                setAddResponse(result); 
+                setAddResponse(result.data); // Set just the data instead of full response
                 handleClose();
             } else {
                 alert("Failed to add employee");
